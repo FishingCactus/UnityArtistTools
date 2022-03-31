@@ -2,8 +2,7 @@
     "name": "fishingcactus.artist-tools.Editor",
     "rootNamespace": "",
     "references": [
-        "fishingcactus.common-code.Runtime",
-        "Cinemachine"
+        "fishingcactus.common-code.Runtime"
     ],
     "includePlatforms": [
         "Editor"
@@ -14,12 +13,6 @@
     "precompiledReferences": [],
     "autoReferenced": true,
     "defineConstraints": [],
-    "versionDefines": [
-        {
-            "name": "com.unity.cinemachine",
-            "expression": "0.0.0",
-            "define": "CINEMACHINE_AVAILABLE"
-        }
-    ],
+    "versionDefines": [],
     "noEngineReferences": false
 }

@@ -1,10 +1,10 @@
 {
   "name": "com.fishingcactus.artist-tools",
   "version": "0.0.1",
-  "displayName": "Artist Tools",
+  "displayName": "FC - Artist Tools",
   "description": "Tools for Art team.",
-  "unity": "2021.2",
-  "unityRelease": "7f1",
+  "unity": "2020.3",
+  "unityRelease": "18f1",
   "author": {
     "name": "FishingCactus",
     "email": "contact@fishingcactus.com",
