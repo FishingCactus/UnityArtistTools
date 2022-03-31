@@ -1,0 +1,22 @@
+{
+  "name": "com.fishingcactus.artist-tools",
+  "version": "0.0.1",
+  "displayName": "Artist Tools",
+  "description": "Tools for Art team.",
+  "unity": "2021.2",
+  "unityRelease": "7f1",
+  "author": {
+    "name": "FishingCactus",
+    "email": "contact@fishingcactus.com",
+    "url": "https://www.fishingcactus.com"
+  },
+  "dependencies": {
+    "com.fishingcactus.common-code" : "0.2.0"
+    },
+  "references": [
+    "FishingCactus.CommonCode.Editor",
+    "FishingCactus.CommonCode.Runtime",
+    "FishingCactus.ArtistTools.Editor",
+    "FishingCactus.ArtistTools.Runtime"
+    ]
+}
