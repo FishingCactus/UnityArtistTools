@@ -165,6 +165,23 @@ namespace FishingCactus
             }
         }
 
+        private void ActiveShadowInChildren(
+            bool active
+            )
+        {
+            GameObject[] selected_object_array = Selection.gameObjects;
+
+            foreach( GameObject mesh_renderer_object in selected_object_array )
+            {
+                MeshRenderer[] mesh_renderer_array = mesh_renderer_object.GetComponentsInChildren<MeshRenderer>();
+
+                foreach( MeshRenderer mesh_renderer in mesh_renderer_array )
+                {
+                    mesh_renderer.shadowCastingMode = (active)?UnityEngine.Rendering.ShadowCastingMode.On: UnityEngine.Rendering.ShadowCastingMode.Off;
+                }
+            }
+        }
+
         // -- UNITY
 
         [MenuItem( "FishingCactus/ArtistsTools" )]
@@ -496,6 +513,20 @@ namespace FishingCactus
                 Selection.objects = selected_object_list.ToArray();
             }
 
+            GUILayout.Label( "Manage shadow in children tool --------------", EditorStyles.boldLabel );
+            GUILayout.BeginHorizontal();
+
+            if( GUILayout.Button( "Active shadows on selected" ) )
+            {
+                ActiveShadowInChildren( true );
+            }
+
+            if( GUILayout.Button( "Desactive shadows on selected" ) )
+            {
+                ActiveShadowInChildren( false );
+            }
+
+            GUILayout.EndHorizontal();
             EditorGUILayout.EndScrollView();
         }
     }
