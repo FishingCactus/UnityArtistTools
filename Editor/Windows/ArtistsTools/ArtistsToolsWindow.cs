@@ -140,6 +140,7 @@ namespace FishingCactus
         private float SpacingMultiplier = 1.5f;
         private float PhysicsSimulationTime = 5.0f;
         private float UniformScaleFactor;
+        private float MultOffset;
         private Vector2 ScrollPosition;
         private Vector3 Offset;
         private Vector3 ScaleFactor;
@@ -380,6 +381,20 @@ namespace FishingCactus
                 foreach( GameObject object_to_offset in selected_object_array )
                 {
                     object_to_offset.transform.position = object_to_offset.transform.position + Offset;
+                }
+            }
+
+            GUILayout.Label( "Position Multiply Offset tool --------------", EditorStyles.boldLabel );
+
+            MultOffset = EditorGUILayout.FloatField( "MultOffset:", MultOffset );
+
+            if( GUILayout.Button( "Multiply by an offset on position !" ) )
+            {
+                GameObject[] selected_object_array = Selection.gameObjects;
+
+                foreach( GameObject object_to_offset in selected_object_array )
+                {
+                    object_to_offset.transform.position = object_to_offset.transform.position * MultOffset;
                 }
             }
 
